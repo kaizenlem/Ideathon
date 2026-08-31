@@ -7,7 +7,7 @@ import { createServer as createViteServer } from 'vite';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 8080;
 
 // Top-level Request Deserialization & Middleware
 app.use(express.json({ limit: '10mb' }));
